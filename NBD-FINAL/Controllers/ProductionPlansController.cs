@@ -78,7 +78,7 @@ namespace NBD.Controllers
             PopulateAssignedLaborData(productionPlan);
             PopulateAssignedMaterialData(productionPlan);
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ID", "Name");
-            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "Phase");
+            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "TeamName");
             return View();
         }
 
@@ -109,7 +109,7 @@ namespace NBD.Controllers
             PopulateAssignedLaborData(productionPlan);
             PopulateAssignedMaterialData(productionPlan);
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ID", "Name", productionPlan.ProjectID);
-            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "Phase", productionPlan.TeamID);
+            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "TeamName", productionPlan.TeamID);
             return View(productionPlan);
         }
 
@@ -143,7 +143,7 @@ namespace NBD.Controllers
             PopulateAssignedLaborData(productionPlan);
             PopulateAssignedMaterialData(productionPlan);
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ID", "Name", productionPlan.ProjectID);
-            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "Phase", productionPlan.TeamID);
+            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "TeamName", productionPlan.TeamID);
             return View(productionPlan);
         }
 
@@ -230,7 +230,7 @@ namespace NBD.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ProjectID"] = new SelectList(_context.Projects, "ID", "Name", productionPlan.ProjectID);
-            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "ID", productionPlan.TeamID);
+            ViewData["TeamID"] = new SelectList(_context.Teams, "ID", "TeamName", productionPlan.TeamID);
             return View(productionPlan);
         }
 
