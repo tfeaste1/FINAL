@@ -38,28 +38,59 @@
             <div class="card-body">
                 <h4 class="card-title">@Html.DisplayNameFor(model => model.ProdPlanLabours)</h4>
                 <dl>
-                    @foreach (var item in Model.ProdPlanLabours)
-                    {
-                        <dd>
-                            @Html.DisplayFor(modelItem => item.LabourRequirement.Task.Description)
+                    <dd class="col-sm-10">
+                        @{
+                        
+                            int labourCount = Model.ProdPlanLabours.Count;
+                            if (labourCount > 0)
+                            {
+                                string firstLabour = Model.ProdPlanLabours.FirstOrDefault().LabourRequirement.Task.Description;
+                                if (labourCount > 1)
+                                {
+                                    string labourList = "";
+                                    var c = Model.ProdPlanLabours.ToList();
+                                    for (int i = 1; i < labourCount; i++)
+                                    {
+                                        labourList += c[i].LabourRequirement.Task.Description + "Estimated Hours: "+ c[i].LabourRequirement.EstHours+ " <br />";
+                                    }
+                                    <a class="" role="button" data-toggle="collapse" href="#collapseCamper@(Model.ID)" aria-expanded="false" aria-controls="collapseCamper@(Model.ID)">
+                                        @firstLabour... <span class="badge badge-info">@labourCount</span>
+                                    </a>
+                                    <div class="collapse" id="collapseLabour@(Model.ID)">
+                                        @Html.Raw(labourList)
+                                    </div>
+                                }
+                                else
+                                {
+                                    @firstLabour
+                                }
+                            }
+                        }
+                            
+                    </dd>
 
-                        </dd>
-                        <dt>
-                            Estimated Date:
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(modelItem => item.LabourRequirement.EstDate)
-                        </dd>
-                        <dt>
-                            Estimated Hours:
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(modelItem => item.LabourRequirement.EstHours)
-                        </dd>
+                    @*@foreach (var item in Model.ProdPlanLabours)
+        {
+            <dd>
+                @Html.DisplayFor(modelItem => item.LabourRequirement.Task.Description)
+
+            </dd>
+            <dt>
+                Estimated Date:
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.LabourRequirement.EstDate)
+            </dd>
+            <dt>
+                Estimated Hours:
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.LabourRequirement.EstHours)
+            </dd>
 
 
 
-                    }
+        }*@
                 </dl>
 
             </div>

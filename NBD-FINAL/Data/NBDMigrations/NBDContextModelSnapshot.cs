@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NBD.Data;
 
-namespace NBD.Migrations
+namespace NBD.Data.NBDMigrations
 {
     [DbContext(typeof(NBDContext))]
     partial class NBDContextModelSnapshot : ModelSnapshot
@@ -881,7 +881,7 @@ namespace NBD.Migrations
                     b.HasOne("NBD.Models.Employee", "Employee")
                         .WithMany("TeamEmployees")
                         .HasForeignKey("EmployeeID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("NBD.Models.Team", "Team")
                         .WithMany("TeamEmployees")

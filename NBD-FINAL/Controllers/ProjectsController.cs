@@ -144,7 +144,7 @@ namespace NBD.Controllers
 
             PopulateAssignedMaterialData(project);
             PopulateAssignedLaborData(project);
-            ViewData["ClientID"] = new SelectList(_context.Clients, "ID", "Address", project.ClientID);
+            ViewData["ClientID"] = new SelectList(_context.Clients, "ID", "FullName", project.ClientID);
             return View(project);
         }
 

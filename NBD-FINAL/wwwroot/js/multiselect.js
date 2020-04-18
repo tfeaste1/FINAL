@@ -1,5 +1,5 @@
 ﻿$('#btnLaborRight').click(function (e) {
-    var selectedLabors = $('#selectedLabors labor:selected');
+    var selectedLabors = $('#selectedLabors option:selected');
     if (selectedLabors.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -10,7 +10,7 @@
 });
 
 $('#btnLaborLeft').click(function (e) {
-    var selectedLabors = $('availLabors labor:selected');
+    var selectedLabors = $('#availLabors option:selected');
     if (selectedLabors.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -22,7 +22,7 @@ $('#btnLaborLeft').click(function (e) {
 });
 
 $('#btnMaterialRight').click(function (e) {
-    var selectedMaterials = $('#selectedMaterials material:selected');
+    var selectedMaterials = $('#selectedMaterials option:selected');
     if (selectedMaterials.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -33,7 +33,7 @@ $('#btnMaterialRight').click(function (e) {
 });
 
 $('#btnMaterialLeft').click(function (e) {
-    var selectedMaterials = $('availMaterials material:selected');
+    var selectedMaterials = $('#availMaterials option:selected');
     if (selectedMaterials.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -45,13 +45,13 @@ $('#btnMaterialLeft').click(function (e) {
 });
 
 $('#btnProjectSubmit').click(function (e) {
-    $('#selectedLabors labor').prop('selected', true);
-    $('#selectedMaterials material').prop('selected', true);
+    $('#selectedLabors option').prop('selected', true);
+    $('#selectedMaterials option').prop('selected', true);
 });
 
 //ProductionPlan Listboxes
 $('#btnProdLaborRight').click(function (e) {
-    var selectedProdLabors = $('#selectedProdLabors labor:selected');
+    var selectedProdLabors = $('#selectedProdLabors option:selected');
     if (selectedProdLabors.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -62,7 +62,7 @@ $('#btnProdLaborRight').click(function (e) {
 });
 
 $('#btnProdLaborLeft').click(function (e) {
-    var selectedProdLabors = $('availProdLabors labor:selected');
+    var selectedProdLabors = $('#availProdLabors option:selected');
     if (selectedProdLabors.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -74,7 +74,7 @@ $('#btnProdLaborLeft').click(function (e) {
 });
 
 $('#btnProdMaterialRight').click(function (e) {
-    var selectedProdMaterials = $('#selectedProdMaterials material:selected');
+    var selectedProdMaterials = $('#selectedProdMaterials option:selected');
     if (selectedProdMaterials.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -85,7 +85,7 @@ $('#btnProdMaterialRight').click(function (e) {
 });
 
 $('#btnProdMaterialLeft').click(function (e) {
-    var selectedProdMaterials = $('availProdMaterials material:selected');
+    var selectedProdMaterials = $('#availProdMaterials option:selected');
     if (selectedProdMaterials.length == 0) {
         alert("Nothing to move.");
         e.preventDefault();
@@ -97,8 +97,8 @@ $('#btnProdMaterialLeft').click(function (e) {
 });
 
 $('#btnProductionPlanSubmit').click(function (e) {
-    $('#selectedProdLabors labor').prop('selected', true);
-    $('#selectedProdMaterials material').prop('selected', true);
+    $('#selectedProdLabors option').prop('selected', true);
+    $('#selectedProdMaterials option').prop('selected', true);
 });
 
 $('#btnEmpMoveRight').click(function (e) {
