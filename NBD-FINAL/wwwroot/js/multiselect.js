@@ -125,7 +125,7 @@ $('#btnEmpMoveLeft').click(function (e) {
     e.preventDefault();
 });
 
-$('#btnCreate').click(function (e) {
+$('#btnSave').click(function (e) {
     $('#selectedOptions option').prop('selected', true);
 });
 

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Weird.Scar\\Documents\\GitHub\\FINAL\\NBD-FINAL\\NBD.csproj": {}
+    "C:\\Users\\toryf\\Desktop\\NBD-GitHub\\FINAL\\NBD-FINAL\\NBD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Weird.Scar\\Documents\\GitHub\\FINAL\\NBD-FINAL\\NBD.csproj": {
+    "C:\\Users\\toryf\\Desktop\\NBD-GitHub\\FINAL\\NBD-FINAL\\NBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Weird.Scar\\Documents\\GitHub\\FINAL\\NBD-FINAL\\NBD.csproj",
+        "projectUniqueName": "C:\\Users\\toryf\\Desktop\\NBD-GitHub\\FINAL\\NBD-FINAL\\NBD.csproj",
         "projectName": "NBD",
-        "projectPath": "C:\\Users\\Weird.Scar\\Documents\\GitHub\\FINAL\\NBD-FINAL\\NBD.csproj",
-        "packagesPath": "C:\\Users\\Weird.Scar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Weird.Scar\\Documents\\GitHub\\FINAL\\NBD-FINAL\\obj\\",
+        "projectPath": "C:\\Users\\toryf\\Desktop\\NBD-GitHub\\FINAL\\NBD-FINAL\\NBD.csproj",
+        "packagesPath": "C:\\Users\\toryf\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toryf\\Desktop\\NBD-GitHub\\FINAL\\NBD-FINAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Weird.Scar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toryf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
